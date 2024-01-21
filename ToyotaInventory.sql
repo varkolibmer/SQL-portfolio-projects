@@ -76,3 +76,45 @@ WHERE year_manufactured < 2023;
 --Basically since it is 2024, the vehicles prior to 2023 need to be removed
 DELETE FROM toyota_cars.ToyotaInventory
 WHERE year_manufactured < 2023;
+
+
+--Now let's check to see if the outdated vehicles are still in the inventory
+SELECT * FROM toyota_cars.ToyotaInventory
+WHERE year_manufactured < 2023;
+
+--The query above returned empty results, thus the outdated vehicles have been removed
+
+--Now, let's check the count of the number of gasoline, all-electric, hybrid, and plug-in hybrid vehicles
+SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
+WHERE type_of_fuel = "Gasoline";
+--Result: 19
+SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
+WHERE type_of_fuel = "Hybrid";
+--Result: 14
+SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
+WHERE type_of_fuel = "Plug-in Hybrid";
+--Result: 3
+SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
+WHERE type_of_fuel = "Electric";
+--1
+
+--Okay, let's try to insert these values DIRECTLY onto another table
+CREATE TABLE toyota_cars.NumberOfVehicleTypes (
+gasoline INT NOT NULL,
+hybrid INT NOT NULL,
+phev INT NOT NULL,
+ev INT NOT NULL
+);
+
+INSERT INTO toyota_cars.NumberOfVehicleTypes (gasoline, hybrid, phev, ev)
+VALUES (SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
+WHERE type_of_fuel = "Gasoline", SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
+WHERE type_of_fuel = "Hybrid", SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
+WHERE type_of_fuel = "Plug-in Hybrid", SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
+WHERE type_of_fuel = "Electric");
+--The SQL Syntax above is not supported, so we will go ahead and insert the counts manually
+
+INSERT INTO toyota_cars.NumberOfVehicleTypes (gasoline, hybrid, phev, ev)
+VALUES (19, 14, 3, 1);
+
+SELECT * FROM toyota_cars.NumberOfVehicleTypes;
