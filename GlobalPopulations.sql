@@ -246,3 +246,33 @@ VALUES
 (3482456,3351322,"Thrissur","KL",0.0391,"in"),
 (3406055,3301294,"Kochi","KL",0.0317,"in"),
 (3302077,3208722,"Indore","MP",0.0291,"in");
+
+
+#Inner Join
+SELECT GlobalPopulation.USCities.city
+FROM GlobalPopulation.USCities
+INNER JOIN GlobalPopulation.INCities
+ON GlobalPopulation.USCities.country_code = GlobalPopulation.INCities.country_code;
+#Expect no results
+
+#LEFT Join
+SELECT GlobalPopulation.USCities.city
+FROM GlobalPopulation.USCities
+LEFT JOIN GlobalPopulation.INCities
+ON GlobalPopulation.USCities.country_code = GlobalPopulation.INCities.country_code;
+#Expect only US Cities
+
+#RIGHT Join
+SELECT GlobalPopulation.USCities.city
+FROM GlobalPopulation.USCities
+RIGHT JOIN GlobalPopulation.INCities
+ON GlobalPopulation.USCities.country_code = GlobalPopulation.INCities.country_code;
+#Expect only Indian Cities
+#We got null values
+
+#FULL OUTER Join
+SELECT GlobalPopulation.USCities.city
+FROM GlobalPopulation.USCities
+FULL JOIN GlobalPopulation.INCities
+ON GlobalPopulation.USCities.country_code = GlobalPopulation.INCities.country_code;
+#Error
