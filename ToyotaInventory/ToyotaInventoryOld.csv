@@ -1,0 +1,41 @@
+id,year_manufactured,make,model,variant,type_of_fuel
+1,2013,Toyota,Sienna,XLE,Gasoline
+2,2012,Toyota,Camry,LE,Hybrid
+3,2011,Toyota,Avalon,XLS,Gasoline
+4,2014,Toyota,Corolla,L,Gasoline
+5,2015,Toyota,RAV4,XLE,Gasoline
+6,2009,Toyota,Matrix,S,Gasoline
+7,2016,Toyota,Sienna,LE,Gasoline
+8,2014,Toyota,Sienna,Limited,Gasoline
+9,2011,Toyota,"FJ Cruiser",Base,Gasoline
+10,2014,Toyota,Highlander,XLE,Gasoline
+11,2015,Toyota,Highlander,Limited,Hybrid
+12,2012,Toyota,Camry,SE,Gasoline
+13,2014,Toyota,Camry,XLE,Hybrid
+14,2017,Toyota,Corolla,XSE,Gasoline
+15,2018,Toyota,Sienna,L,Gasoline
+16,2013,Toyota,Yaris,L,Gasoline
+17,2014,Toyota,Prius,Base,Hybrid
+18,2015,Toyota,Camry,LE,Hybrid
+19,2019,Toyota,RAV4,XLE,Gasoline
+20,2013,Toyota,RAV4,Limited,Gasoline
+21,2013,Toyota,Camry,SE,Gasoline
+22,2017,Toyota,Camry,XSE,Gasoline
+23,2018,Toyota,Corolla,XLE,Gasoline
+24,2018,Toyota,Sequoia,Limited,Gasoline
+25,2017,Toyota,Highlander,LE,Hybrid
+26,2020,Toyota,Corolla,LE,Hybrid
+27,2020,Toyota,Corolla,XSE,Gasoline
+28,2010,Toyota,Corolla,CE,Gasoline
+29,2011,Toyota,Corolla,S,Gasoline
+30,2014,Toyota,Corolla,"LE Plus",Gasoline
+31,2024,Toyota,Sienna,XLE,Hybrid
+32,2015,Toyota,"Prius Prime",N/A,"Plug-in Hybrid"
+33,2019,Toyota,"Yaris iA",LE,Gasoline
+34,2009,Toyota,Sienna,CE,Gasoline
+35,2013,Toyota,RAV4,N/A,Electric
+36,2012,Toyota,"Prius C",3,Hybrid
+37,2013,Toyota,"Prius C",2,Hybrid
+38,2016,Toyota,"Prius V",Base,Hybrid
+39,2012,Toyota,"Prius V",3,Hybrid
+40,2018,Toyota,RAV4,SE,Gasoline

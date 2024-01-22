@@ -1,0 +1,38 @@
+id,year_manufactured,make,model,variant,type_of_fuel
+1,2023,Toyota,RAV4,XLE,Gasoline
+2,2023,Toyota,Camry,LE,Hybrid
+3,2024,Toyota,Crown,Limited,Hybrid
+4,2024,Toyota,Corolla,LE,Gasoline
+5,2024,Toyota,RAV4,XLE,Hybrid
+6,2024,Toyota,RAV4,LE,Gasoline
+7,2024,Toyota,RAV4,XSE,"Plug-in Hybrid"
+8,2024,Toyota,Sienna,Limited,Hybrid
+9,2023,Toyota,"Corolla Cross",LE,Gasoline
+10,2024,Toyota,"Grand Highlander",XLE,Hybrid
+11,2024,Toyota,"Grand Highlander",Limited,Hybrid
+12,2023,Toyota,Highlander,XSE,Gasoline
+13,2024,Toyota,Highlander,Limited,Gasoline
+14,2024,Toyota,Highlander,XLE,Hybrid
+15,2024,Toyota,Sienna,LE,Hybrid
+16,2023,Toyota,bz4x,XLE,Electric
+17,2024,Toyota,Prius,Base,Hybrid
+18,2024,Toyota,Crown,XLE,Hybrid
+19,2023,Toyota,"Corolla Cross",LE,Hybrid
+20,2024,Toyota,RAV4,XSE,"Plug-in Hybrid"
+21,2023,Toyota,Camry,SE,Gasoline
+22,2023,Toyota,Camry,XSE,Gasoline
+23,2023,Toyota,Camry,SE,Hybrid
+24,2023,Toyota,Camry,LE,Hybrid
+25,2024,Toyota,RAV4,LE,Gasoline
+26,2023,Toyota,Corolla,LE,Gasoline
+27,2023,Toyota,Corolla,LE,Gasoline
+28,2023,Toyota,Corolla,LE,Gasoline
+29,2023,Toyota,Corolla,LE,Gasoline
+30,2023,Toyota,Corolla,SE,Gasoline
+31,2024,Toyota,Sienna,XLE,Hybrid
+32,2024,Toyota,"Prius Prime",N/A,"Plug-in Hybrid"
+34,2024,Toyota,RAV4,Adventure,Gasoline
+35,2024,Toyota,RAV4,Adventure,Gasoline
+36,2024,Toyota,RAV4,Adventure,Gasoline
+38,2023,Toyota,Highlander,LE,Gasoline
+40,2024,Toyota,RAV4,XLE,Gasoline

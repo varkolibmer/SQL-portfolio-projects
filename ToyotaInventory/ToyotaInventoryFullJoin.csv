@@ -1,0 +1,128 @@
+year_manufactured,make,model,variant,type_of_fuel,year_manufactured,make,model,variant,type_of_fuel
+2023,Toyota,RAV4,XLE,Gasoline,2018,Toyota,RAV4,SE,Gasoline
+2023,Toyota,RAV4,XLE,Gasoline,2013,Toyota,RAV4,N/A,Electric
+2023,Toyota,RAV4,XLE,Gasoline,2013,Toyota,RAV4,Limited,Gasoline
+2023,Toyota,RAV4,XLE,Gasoline,2019,Toyota,RAV4,XLE,Gasoline
+2023,Toyota,RAV4,XLE,Gasoline,2015,Toyota,RAV4,XLE,Gasoline
+2023,Toyota,Camry,LE,Hybrid,2017,Toyota,Camry,XSE,Gasoline
+2023,Toyota,Camry,LE,Hybrid,2013,Toyota,Camry,SE,Gasoline
+2023,Toyota,Camry,LE,Hybrid,2015,Toyota,Camry,LE,Hybrid
+2023,Toyota,Camry,LE,Hybrid,2014,Toyota,Camry,XLE,Hybrid
+2023,Toyota,Camry,LE,Hybrid,2012,Toyota,Camry,SE,Gasoline
+2023,Toyota,Camry,LE,Hybrid,2012,Toyota,Camry,LE,Hybrid
+2024,Toyota,Crown,Limited,Hybrid,NULL,NULL,NULL,NULL,NULL
+2024,Toyota,Corolla,LE,Gasoline,2014,Toyota,Corolla,"LE Plus",Gasoline
+2024,Toyota,Corolla,LE,Gasoline,2011,Toyota,Corolla,S,Gasoline
+2024,Toyota,Corolla,LE,Gasoline,2010,Toyota,Corolla,CE,Gasoline
+2024,Toyota,Corolla,LE,Gasoline,2020,Toyota,Corolla,XSE,Gasoline
+2024,Toyota,Corolla,LE,Gasoline,2020,Toyota,Corolla,LE,Hybrid
+2024,Toyota,Corolla,LE,Gasoline,2018,Toyota,Corolla,XLE,Gasoline
+2024,Toyota,Corolla,LE,Gasoline,2017,Toyota,Corolla,XSE,Gasoline
+2024,Toyota,Corolla,LE,Gasoline,2014,Toyota,Corolla,L,Gasoline
+2024,Toyota,RAV4,XLE,Hybrid,2018,Toyota,RAV4,SE,Gasoline
+2024,Toyota,RAV4,XLE,Hybrid,2013,Toyota,RAV4,N/A,Electric
+2024,Toyota,RAV4,XLE,Hybrid,2013,Toyota,RAV4,Limited,Gasoline
+2024,Toyota,RAV4,XLE,Hybrid,2019,Toyota,RAV4,XLE,Gasoline
+2024,Toyota,RAV4,XLE,Hybrid,2015,Toyota,RAV4,XLE,Gasoline
+2024,Toyota,RAV4,LE,Gasoline,2018,Toyota,RAV4,SE,Gasoline
+2024,Toyota,RAV4,LE,Gasoline,2013,Toyota,RAV4,N/A,Electric
+2024,Toyota,RAV4,LE,Gasoline,2013,Toyota,RAV4,Limited,Gasoline
+2024,Toyota,RAV4,LE,Gasoline,2019,Toyota,RAV4,XLE,Gasoline
+2024,Toyota,RAV4,LE,Gasoline,2015,Toyota,RAV4,XLE,Gasoline
+2024,Toyota,RAV4,XSE,"Plug-in Hybrid",2018,Toyota,RAV4,SE,Gasoline
+2024,Toyota,RAV4,XSE,"Plug-in Hybrid",2013,Toyota,RAV4,N/A,Electric
+2024,Toyota,RAV4,XSE,"Plug-in Hybrid",2013,Toyota,RAV4,Limited,Gasoline
+2024,Toyota,RAV4,XSE,"Plug-in Hybrid",2019,Toyota,RAV4,XLE,Gasoline
+2024,Toyota,RAV4,XSE,"Plug-in Hybrid",2015,Toyota,RAV4,XLE,Gasoline
+2024,Toyota,Sienna,Limited,Hybrid,2009,Toyota,Sienna,CE,Gasoline
+2024,Toyota,Sienna,Limited,Hybrid,2024,Toyota,Sienna,XLE,Hybrid
+2024,Toyota,Sienna,Limited,Hybrid,2018,Toyota,Sienna,L,Gasoline
+2024,Toyota,Sienna,Limited,Hybrid,2014,Toyota,Sienna,Limited,Gasoline
+2024,Toyota,Sienna,Limited,Hybrid,2016,Toyota,Sienna,LE,Gasoline
+2024,Toyota,Sienna,Limited,Hybrid,2013,Toyota,Sienna,XLE,Gasoline
+2023,Toyota,"Corolla Cross",LE,Gasoline,NULL,NULL,NULL,NULL,NULL
+2024,Toyota,"Grand Highlander",XLE,Hybrid,NULL,NULL,NULL,NULL,NULL
+2024,Toyota,"Grand Highlander",Limited,Hybrid,NULL,NULL,NULL,NULL,NULL
+2023,Toyota,Highlander,XSE,Gasoline,2017,Toyota,Highlander,LE,Hybrid
+2023,Toyota,Highlander,XSE,Gasoline,2015,Toyota,Highlander,Limited,Hybrid
+2023,Toyota,Highlander,XSE,Gasoline,2014,Toyota,Highlander,XLE,Gasoline
+2024,Toyota,Highlander,Limited,Gasoline,2017,Toyota,Highlander,LE,Hybrid
+2024,Toyota,Highlander,Limited,Gasoline,2015,Toyota,Highlander,Limited,Hybrid
+2024,Toyota,Highlander,Limited,Gasoline,2014,Toyota,Highlander,XLE,Gasoline
+2024,Toyota,Highlander,XLE,Hybrid,2017,Toyota,Highlander,LE,Hybrid
+2024,Toyota,Highlander,XLE,Hybrid,2015,Toyota,Highlander,Limited,Hybrid
+2024,Toyota,Highlander,XLE,Hybrid,2014,Toyota,Highlander,XLE,Gasoline
+2024,Toyota,Sienna,LE,Hybrid,2009,Toyota,Sienna,CE,Gasoline
+2024,Toyota,Sienna,LE,Hybrid,2024,Toyota,Sienna,XLE,Hybrid
+2024,Toyota,Sienna,LE,Hybrid,2018,Toyota,Sienna,L,Gasoline
+2024,Toyota,Sienna,LE,Hybrid,2014,Toyota,Sienna,Limited,Gasoline
+2024,Toyota,Sienna,LE,Hybrid,2016,Toyota,Sienna,LE,Gasoline
+2024,Toyota,Sienna,LE,Hybrid,2013,Toyota,Sienna,XLE,Gasoline
+2023,Toyota,bz4x,XLE,Electric,NULL,NULL,NULL,NULL,NULL
+2024,Toyota,Prius,Base,Hybrid,2014,Toyota,Prius,Base,Hybrid
+2024,Toyota,Crown,XLE,Hybrid,NULL,NULL,NULL,NULL,NULL
+2023,Toyota,"Corolla Cross",LE,Hybrid,NULL,NULL,NULL,NULL,NULL
+2023,Toyota,Camry,SE,Gasoline,2017,Toyota,Camry,XSE,Gasoline
+2023,Toyota,Camry,SE,Gasoline,2013,Toyota,Camry,SE,Gasoline
+2023,Toyota,Camry,SE,Gasoline,2015,Toyota,Camry,LE,Hybrid
+2023,Toyota,Camry,SE,Gasoline,2014,Toyota,Camry,XLE,Hybrid
+2023,Toyota,Camry,SE,Gasoline,2012,Toyota,Camry,SE,Gasoline
+2023,Toyota,Camry,SE,Gasoline,2012,Toyota,Camry,LE,Hybrid
+2023,Toyota,Camry,XSE,Gasoline,2017,Toyota,Camry,XSE,Gasoline
+2023,Toyota,Camry,XSE,Gasoline,2013,Toyota,Camry,SE,Gasoline
+2023,Toyota,Camry,XSE,Gasoline,2015,Toyota,Camry,LE,Hybrid
+2023,Toyota,Camry,XSE,Gasoline,2014,Toyota,Camry,XLE,Hybrid
+2023,Toyota,Camry,XSE,Gasoline,2012,Toyota,Camry,SE,Gasoline
+2023,Toyota,Camry,XSE,Gasoline,2012,Toyota,Camry,LE,Hybrid
+2023,Toyota,Camry,SE,Hybrid,2017,Toyota,Camry,XSE,Gasoline
+2023,Toyota,Camry,SE,Hybrid,2013,Toyota,Camry,SE,Gasoline
+2023,Toyota,Camry,SE,Hybrid,2015,Toyota,Camry,LE,Hybrid
+2023,Toyota,Camry,SE,Hybrid,2014,Toyota,Camry,XLE,Hybrid
+2023,Toyota,Camry,SE,Hybrid,2012,Toyota,Camry,SE,Gasoline
+2023,Toyota,Camry,SE,Hybrid,2012,Toyota,Camry,LE,Hybrid
+2023,Toyota,Corolla,LE,Gasoline,2014,Toyota,Corolla,"LE Plus",Gasoline
+2023,Toyota,Corolla,LE,Gasoline,2011,Toyota,Corolla,S,Gasoline
+2023,Toyota,Corolla,LE,Gasoline,2010,Toyota,Corolla,CE,Gasoline
+2023,Toyota,Corolla,LE,Gasoline,2020,Toyota,Corolla,XSE,Gasoline
+2023,Toyota,Corolla,LE,Gasoline,2020,Toyota,Corolla,LE,Hybrid
+2023,Toyota,Corolla,LE,Gasoline,2018,Toyota,Corolla,XLE,Gasoline
+2023,Toyota,Corolla,LE,Gasoline,2017,Toyota,Corolla,XSE,Gasoline
+2023,Toyota,Corolla,LE,Gasoline,2014,Toyota,Corolla,L,Gasoline
+2023,Toyota,Corolla,SE,Gasoline,2014,Toyota,Corolla,"LE Plus",Gasoline
+2023,Toyota,Corolla,SE,Gasoline,2011,Toyota,Corolla,S,Gasoline
+2023,Toyota,Corolla,SE,Gasoline,2010,Toyota,Corolla,CE,Gasoline
+2023,Toyota,Corolla,SE,Gasoline,2020,Toyota,Corolla,XSE,Gasoline
+2023,Toyota,Corolla,SE,Gasoline,2020,Toyota,Corolla,LE,Hybrid
+2023,Toyota,Corolla,SE,Gasoline,2018,Toyota,Corolla,XLE,Gasoline
+2023,Toyota,Corolla,SE,Gasoline,2017,Toyota,Corolla,XSE,Gasoline
+2023,Toyota,Corolla,SE,Gasoline,2014,Toyota,Corolla,L,Gasoline
+2024,Toyota,Sienna,XLE,Hybrid,2009,Toyota,Sienna,CE,Gasoline
+2024,Toyota,Sienna,XLE,Hybrid,2024,Toyota,Sienna,XLE,Hybrid
+2024,Toyota,Sienna,XLE,Hybrid,2018,Toyota,Sienna,L,Gasoline
+2024,Toyota,Sienna,XLE,Hybrid,2014,Toyota,Sienna,Limited,Gasoline
+2024,Toyota,Sienna,XLE,Hybrid,2016,Toyota,Sienna,LE,Gasoline
+2024,Toyota,Sienna,XLE,Hybrid,2013,Toyota,Sienna,XLE,Gasoline
+2024,Toyota,"Prius Prime",N/A,"Plug-in Hybrid",2015,Toyota,"Prius Prime",N/A,"Plug-in Hybrid"
+2024,Toyota,RAV4,Adventure,Gasoline,2018,Toyota,RAV4,SE,Gasoline
+2024,Toyota,RAV4,Adventure,Gasoline,2013,Toyota,RAV4,N/A,Electric
+2024,Toyota,RAV4,Adventure,Gasoline,2013,Toyota,RAV4,Limited,Gasoline
+2024,Toyota,RAV4,Adventure,Gasoline,2019,Toyota,RAV4,XLE,Gasoline
+2024,Toyota,RAV4,Adventure,Gasoline,2015,Toyota,RAV4,XLE,Gasoline
+2023,Toyota,Highlander,LE,Gasoline,2017,Toyota,Highlander,LE,Hybrid
+2023,Toyota,Highlander,LE,Gasoline,2015,Toyota,Highlander,Limited,Hybrid
+2023,Toyota,Highlander,LE,Gasoline,2014,Toyota,Highlander,XLE,Gasoline
+2024,Toyota,RAV4,XLE,Gasoline,2018,Toyota,RAV4,SE,Gasoline
+2024,Toyota,RAV4,XLE,Gasoline,2013,Toyota,RAV4,N/A,Electric
+2024,Toyota,RAV4,XLE,Gasoline,2013,Toyota,RAV4,Limited,Gasoline
+2024,Toyota,RAV4,XLE,Gasoline,2019,Toyota,RAV4,XLE,Gasoline
+2024,Toyota,RAV4,XLE,Gasoline,2015,Toyota,RAV4,XLE,Gasoline
+NULL,NULL,NULL,NULL,NULL,2011,Toyota,Avalon,XLS,Gasoline
+NULL,NULL,NULL,NULL,NULL,2009,Toyota,Matrix,S,Gasoline
+NULL,NULL,NULL,NULL,NULL,2011,Toyota,"FJ Cruiser",Base,Gasoline
+NULL,NULL,NULL,NULL,NULL,2013,Toyota,Yaris,L,Gasoline
+NULL,NULL,NULL,NULL,NULL,2018,Toyota,Sequoia,Limited,Gasoline
+NULL,NULL,NULL,NULL,NULL,2019,Toyota,"Yaris iA",LE,Gasoline
+NULL,NULL,NULL,NULL,NULL,2012,Toyota,"Prius C",3,Hybrid
+NULL,NULL,NULL,NULL,NULL,2013,Toyota,"Prius C",2,Hybrid
+NULL,NULL,NULL,NULL,NULL,2016,Toyota,"Prius V",Base,Hybrid
+NULL,NULL,NULL,NULL,NULL,2012,Toyota,"Prius V",3,Hybrid
