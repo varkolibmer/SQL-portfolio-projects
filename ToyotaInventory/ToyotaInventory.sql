@@ -61,8 +61,81 @@ VALUES (1, 2023, "Toyota", "RAV4", "XLE", "Gasoline"),
 (40, 2024, "Toyota", "RAV4", "XLE", "Gasoline");
 
 
+#Adding region_variant column to table
+ALTER TABLE toyota_cars.ToyotaInventory
+ADD region_variant VARCHAR(15);
+
+SELECT DISTINCT(model) FROM toyota_cars.ToyotaInventory;
+
+#Populate the region_variant column
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'UAE'
+WHERE model = 'RAV4';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'KSA'
+WHERE model = 'Camry';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'USA'
+WHERE model = 'Crown';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'AFG'
+WHERE model = 'Corolla';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'CAN'
+WHERE model = 'Sienna';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'JPN'
+WHERE model = 'Corolla Cross';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'USA'
+WHERE model = 'Grand Highlander';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'MX'
+WHERE model = 'Highlander';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'USA'
+WHERE model = 'bz4x';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'JPN'
+WHERE model = 'Prius';
+
+UPDATE toyota_cars.ToyotaInventory
+SET region_variant = 'USA'
+WHERE model = 'Prius Prime';
+
 #Lets preview the data in the table
 SELECT * FROM toyota_cars.ToyotaInventory;
+
+#Now, let's add the corresponding region column to the countries
+#For example, US, CAN, MX are in North America. So in the region column, it should say North America
+ALTER TABLE toyota_cars.ToyotaInventory
+ADD region VARCHAR(50);
+
+SELECT DISTINCT(region_variant) FROM toyota_cars.ToyotaInventory;
+
+UPDATE toyota_cars.ToyotaInventory
+SET region = 'North America'
+WHERE region_variant IN ('USA', 'CAN', 'MX');
+
+UPDATE toyota_cars.ToyotaInventory
+SET region = 'Middle East'
+WHERE region_variant IN ('KSA', 'UAE');
+
+UPDATE toyota_cars.ToyotaInventory
+SET region = 'Asia'
+WHERE region_variant IN ('JPN', 'AFG', 'CN', 'IN', 'PAK', 'BAN');
+
+SELECT * FROM toyota_cars.ToyotaInventory;
+
 
 #Order by year of manufacture
 SELECT year_manufactured, make, model, variant, type_of_fuel FROM toyota_cars.ToyotaInventory
@@ -172,7 +245,100 @@ VALUES (1, 2013, "Toyota", "Sienna", "XLE", "Gasoline"),
 (39, 2012, "Toyota", "Prius V", "3", "Hybrid"),
 (40, 2018, "Toyota", "RAV4", "SE", "Gasoline");
 
+
+#Adding region_variant column to table
+ALTER TABLE toyota_cars.ToyotaInventory_OLD
+ADD region_variant VARCHAR(15);
+
+SELECT DISTINCT(model) FROM toyota_cars.ToyotaInventory_OLD;
+
+#Populate the region_variant column
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'CAN'
+WHERE model = 'Sienna';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'KSA'
+WHERE model = 'Camry';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'UAE'
+WHERE model = 'Avalon';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'NIG'
+WHERE model = 'Corolla';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'POL'
+WHERE model = 'RAV4';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'CAN'
+WHERE model = 'Matrix';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'USA'
+WHERE model = 'FJ Cruiser';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'KEN'
+WHERE model = 'Highlander';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'KSA'
+WHERE model = 'Yaris';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'USA'
+WHERE model = 'Prius';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'UAE'
+WHERE model = 'Sequoia';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'USA'
+WHERE model = 'Prius Prime';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'USA'
+WHERE model = 'Yaris iA';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'PAK'
+WHERE model = 'Prius C';
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region_variant = 'USA'
+WHERE model = 'Prius V';
+
 SELECT * FROM toyota_cars.ToyotaInventory_OLD;
+
+SELECT DISTINCT(region_variant) FROM toyota_cars.ToyotaInventory_OLD;
+
+ALTER TABLE toyota_cars.ToyotaInventory_OLD
+ADD region VARCHAR(50);
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region = 'North America'
+WHERE region_variant IN ('USA', 'CAN', 'MX');
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region = 'Middle East'
+WHERE region_variant IN ('KSA', 'UAE', 'MX');
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region = 'Africa'
+WHERE region_variant IN ('NIG', 'KEN');
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region = 'Asia'
+WHERE region_variant IN ('JPN', 'AFG', 'CN', 'IN', 'PAK', 'BAN');
+
+UPDATE toyota_cars.ToyotaInventory_OLD
+SET region = 'Europe'
+WHERE region_variant IN ('UK', 'POL');
 
 
 #Inner Join on model of the vehicle
@@ -219,4 +385,7 @@ SELECT LATEST.year_manufactured, LATEST.make, LATEST.model, LATEST.variant, LATE
 FROM toyota_cars.ToyotaInventory AS LATEST
 NATURAL JOIN toyota_cars.ToyotaInventory_OLD AS OLD;
 #Natural join will join tables by all columns with ONLY the same names
+
+
+
 
