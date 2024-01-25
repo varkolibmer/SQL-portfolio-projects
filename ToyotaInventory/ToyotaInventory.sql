@@ -67,50 +67,31 @@ ADD region_variant VARCHAR(15);
 
 SELECT DISTINCT(model) FROM toyota_cars.ToyotaInventory;
 
+SELECT * FROM toyota_cars.ToyotaInventory;
+
+#Using stored procedure for the UPDATE statements instead of repeatedly typing them...
+DELIMITER $$
+CREATE PROCEDURE region_variant(IN region_code VARCHAR(15), IN model_name VARCHAR(50))
+BEGIN
+	UPDATE toyota_cars.ToyotaInventory
+	SET region_variant = region_code
+	WHERE model = model_name;
+END $$
+DELIMITER ;
+
 #Populate the region_variant column
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'UAE'
-WHERE model = 'RAV4';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'KSA'
-WHERE model = 'Camry';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'USA'
-WHERE model = 'Crown';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'AFG'
-WHERE model = 'Corolla';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'CAN'
-WHERE model = 'Sienna';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'JPN'
-WHERE model = 'Corolla Cross';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'USA'
-WHERE model = 'Grand Highlander';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'MX'
-WHERE model = 'Highlander';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'USA'
-WHERE model = 'bz4x';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'JPN'
-WHERE model = 'Prius';
-
-UPDATE toyota_cars.ToyotaInventory
-SET region_variant = 'USA'
-WHERE model = 'Prius Prime';
+#Now using the stored procedure
+CALL region_variant('UAE', 'RAV4');
+CALL region_variant('KSA', 'Camry');
+CALL region_variant('USA', 'Crown');
+CALL region_variant('AFG', 'Corolla');
+CALL region_variant('CAN', 'Sienna');
+CALL region_variant('JPN', 'Corolla Cross');
+CALL region_variant('USA', 'Grand Highlander');
+CALL region_variant('MX', 'Highlander');
+CALL region_variant('USA', 'bz4x');
+CALL region_variant('JPN', 'Prius');
+CALL region_variant('USA', 'Prius Prime');
 
 #Lets preview the data in the table
 SELECT * FROM toyota_cars.ToyotaInventory;
@@ -122,17 +103,25 @@ ADD region VARCHAR(50);
 
 SELECT DISTINCT(region_variant) FROM toyota_cars.ToyotaInventory;
 
-UPDATE toyota_cars.ToyotaInventory
-SET region = 'North America'
-WHERE region_variant IN ('USA', 'CAN', 'MX');
+#Using stored procedure for the UPDATE statements instead of repeatedly typing them...
+#Below stored procedure not working for looping through list. Will need to come back to this.
+DELIMITER $$
+CREATE PROCEDURE region_newmodels(IN region_name VARCHAR(50), IN region_code VARCHAR(15))
+BEGIN
+	UPDATE toyota_cars.ToyotaInventory
+	SET region = region_name
+	WHERE region_variant IN (region_code, region_code);
+END $$
+DELIMITER ;
 
-UPDATE toyota_cars.ToyotaInventory
-SET region = 'Middle East'
-WHERE region_variant IN ('KSA', 'UAE');
+CALL region_newmodels('North America', ('USA', 'CAN', 'MX'));
 
-UPDATE toyota_cars.ToyotaInventory
-SET region = 'Asia'
-WHERE region_variant IN ('JPN', 'AFG', 'CN', 'IN', 'PAK', 'BAN');
+CALL region_newmodels('Middle East', ('KSA', 'UAE', 'IRN', 'IRQ', 'BHR', 'ISR', 'JOR', 
+'KUW', 'LBN', 'OMN', 'QTR', 'SYR', 'YMN', 'ARM', 'AZR', 'CYP', 'GEOR', 'TURK'));
+
+CALL region_newmodels('Asia', ('KZK', 'KYR', 'TAJK', 'TURKM', 'UZB', 'CN', 'HK', 'SKOR', 'JP', 'AFG', 'BAN', 'BHUT', 'IN', 'NEP', 'PAK', 'SRL',
+'CAM', 'LAOS', 'MALAY', 'MYNM', 'PHIL', 'SING', 'THAI','VIET'));
+
 
 SELECT * FROM toyota_cars.ToyotaInventory;
 
@@ -178,18 +167,14 @@ phev INT NOT NULL,
 ev INT NOT NULL
 );
 
-INSERT INTO toyota_cars.NumberOfVehicleTypes (gasoline, hybrid, phev, ev)
-VALUES (SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
-WHERE type_of_fuel = "Gasoline", SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
-WHERE type_of_fuel = "Hybrid", SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
-WHERE type_of_fuel = "Plug-in Hybrid", SELECT COUNT(*) FROM toyota_cars.ToyotaInventory
-WHERE type_of_fuel = "Electric");
-#The SQL Syntax above is not supported, so we will go ahead and insert the counts manually
 
 INSERT INTO toyota_cars.NumberOfVehicleTypes (gasoline, hybrid, phev, ev)
 VALUES (19, 14, 3, 1);
 
 SELECT * FROM toyota_cars.NumberOfVehicleTypes;
+
+
+DROP TABLE toyota_cars.ToyotaInventory_OLD;
 
 #Let's create a table containing inventory of older model Toyotas
 #The purpose of this exercise is to perform joins on the two tables
@@ -252,66 +237,48 @@ ADD region_variant VARCHAR(15);
 
 SELECT DISTINCT(model) FROM toyota_cars.ToyotaInventory_OLD;
 
+#Using stored procedure for the UPDATE statements instead of repeatedly typing them...
+DELIMITER $$
+CREATE PROCEDURE region_variant_oldermodels(IN region_code VARCHAR(15), IN model_name VARCHAR(50))
+BEGIN
+	UPDATE toyota_cars.ToyotaInventory_OLD
+	SET region_variant = region_code
+	WHERE model = model_name;
+END $$
+DELIMITER ;
+
+CALL region_variant_oldermodels('CAN', 'Sienna');
 #Populate the region_variant column
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'CAN'
-WHERE model = 'Sienna';
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'KSA'
-WHERE model = 'Camry';
+CALL region_variant_oldermodels('KSA', 'Camry');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'UAE'
-WHERE model = 'Avalon';
+CALL region_variant_oldermodels('UAE', 'Avalon');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'NIG'
-WHERE model = 'Corolla';
+CALL region_variant_oldermodels('NIG', 'Corolla');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'POL'
-WHERE model = 'RAV4';
+CALL region_variant_oldermodels('POL', 'RAV4');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'CAN'
-WHERE model = 'Matrix';
+CALL region_variant_oldermodels('CAN', 'Matrix');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'USA'
-WHERE model = 'FJ Cruiser';
+CALL region_variant_oldermodels('USA', 'FJ Cruiser');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'KEN'
-WHERE model = 'Highlander';
+CALL region_variant_oldermodels('KEN', 'Highlander');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'KSA'
-WHERE model = 'Yaris';
+CALL region_variant_oldermodels('KSA', 'Yaris');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'USA'
-WHERE model = 'Prius';
+CALL region_variant_oldermodels('USA', 'Prius');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'UAE'
-WHERE model = 'Sequoia';
+CALL region_variant_oldermodels('UAE', 'Sequoia');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'USA'
-WHERE model = 'Prius Prime';
+CALL region_variant_oldermodels('USA', 'Prius Prime');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'USA'
-WHERE model = 'Yaris iA';
+CALL region_variant_oldermodels('USA', 'Yaris iA');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'PAK'
-WHERE model = 'Prius C';
+CALL region_variant_oldermodels('PAK', 'Prius C');
 
-UPDATE toyota_cars.ToyotaInventory_OLD
-SET region_variant = 'USA'
-WHERE model = 'Prius V';
+CALL region_variant_oldermodels('USA', 'Prius V');
+
+
 
 SELECT * FROM toyota_cars.ToyotaInventory_OLD;
 
@@ -339,6 +306,11 @@ WHERE region_variant IN ('JPN', 'AFG', 'CN', 'IN', 'PAK', 'BAN');
 UPDATE toyota_cars.ToyotaInventory_OLD
 SET region = 'Europe'
 WHERE region_variant IN ('UK', 'POL');
+
+
+
+
+
 
 
 #Inner Join on model of the vehicle
